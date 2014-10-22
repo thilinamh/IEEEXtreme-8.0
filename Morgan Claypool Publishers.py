@@ -1,4 +1,4 @@
-case = list(map(int,input().split()))
+case = list(map(int,input().split()))# create a list of Integer from a list of String
 subjects=case[0]
 num_of_constraints=case[1]
 
@@ -13,12 +13,12 @@ for recrd in constraints[1:]: #create a list of all unique numbers in constraint
 plan = list(map(int,input().split()))
 
 state=True
-if(not (len(unique) == len(plan))): # if the subjects are differ than given constraints
+if(not (len(unique) == len(plan))): # if the number of subjects differ than given constraints
     state=False
-
-for x in constraints:
-    if plan.index(x[0])>plan.index(x[1]):
-        state=False
+else:
+    for x in constraints:
+        if plan.index(x[0])>plan.index(x[1]):
+            state=False
 
 out="YES" if state else "NO"
 print(out)
