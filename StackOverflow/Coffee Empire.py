@@ -1,4 +1,8 @@
-'''We are maintaining a Corner object for each corner'''
+'''We are maintaining a Corner object for each corner
+   After filling data we calculate income for each corner and 
+   put them in a 2D list. Then we find the maximum value out of them and 
+   print its' coordinates'''
+
 class Corner:
 
     def __init__(self):
@@ -54,6 +58,8 @@ case=list(map(int,input().split())) # create a list of Integer from a list of St
 width=case[0]
 height=case[1]
 corner_grid=[]     #Holds Corner objects
+'''0th index of corner_grid contains a list of Corner objects which 
+   represent the 1st row of corners'''
 
 '''Read initializing lines of input and create a 2D list of Corner objects'''
 for x in range(height):
